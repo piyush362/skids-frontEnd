@@ -128,7 +128,7 @@ const EditUserModel = ({ setEditModel, editItemId, setEditItemId }) => {
 
                 {/* {isUploading && <p>Adding new user, Please wait...</p>} */}
                 <div className="adduserbtn">
-                    <p onClick={(e) => handleSubmt(e)}>Add User</p>
+                    <p onClick={(e) => handleSubmt(e)}>Update User</p>
                 </div>
             </div>
 
