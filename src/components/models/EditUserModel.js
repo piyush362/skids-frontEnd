@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "./style.css";
-import Loder from '../Loder/Loder';
+// import Loder from '../Loder/Loder';
 import axios from "axios";
 
 const EditUserModel = ({ setEditModel, editItemId, setEditItemId }) => {
@@ -66,7 +66,7 @@ const EditUserModel = ({ setEditModel, editItemId, setEditItemId }) => {
                 `https://skids.onrender.com/api/user/${tempId}`,
                 user
             );
-            //   console.log(response.data);
+            console.log(response.data);
             setEditModel(false);
             setIsUplaoding(false);
             window.location.reload();
