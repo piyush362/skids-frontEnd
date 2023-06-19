@@ -38,7 +38,7 @@ const AddUserModel = ({ setAddUserModel }) => {
         "https://skids.onrender.com/api/user",
         newuser
       );
-      //   console.log(response.data);
+      console.log(response.data);
       setAddUserModel(false);
       setIsUplaoding(false);
       //   alert("user added...");
