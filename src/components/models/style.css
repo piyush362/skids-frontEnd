@@ -90,3 +90,12 @@
     background-color: red;
     color: #f2f2f2;
   }
+
+
+
+
+  @media (max-width: 600px) {
+    .addUserModel{
+      width: 330px;
+    }
+ }
