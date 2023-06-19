@@ -21,7 +21,7 @@ const UserList = () => {
   const getAllUsers = async () => {
     try {
       const response = await axios.get("https://skids.onrender.com/api/users");
-      setAllUsers(response.data);
+      setAllUsers(response.data.reverse());
     } catch (error) {
       console.log(error.message);
     }
