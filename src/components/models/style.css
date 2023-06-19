@@ -1,0 +1,92 @@
+.upperModelDiv{
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.299); */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addUserModel{
+    width: 50%;
+    height: 500px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+.addUserModel {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+  }
+  
+  .addUserModel p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .addUserModel label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .addUserModel input[type="text"] {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .addUserModel div:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  .adduserbtn{
+    margin-top: 150px;
+    text-align: center;
+    background-color: rgb(0, 154, 102);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .uploadingbox{
+    position: absolute;
+    top: 350px;
+    background-color: green;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+  }
+
+  .deletebox{
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .deleteboxbtn{
+    display: flex;
+    justify-content: space-around;
+  }
+  .deleteboxbtn > p{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+  .deletebtn{
+    background-color: red;
+    color: #f2f2f2;
+  }

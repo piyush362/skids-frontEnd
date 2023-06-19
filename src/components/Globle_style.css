@@ -1,0 +1,95 @@
+.navbar{
+    background-color: #1F6E8C;
+    color: #e3e0e0;
+    border-radius: 20px;
+    padding: 2px 20px;
+}
+
+
+/* /// userlist */
+.uppercontainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+.uppercontainer > button{
+  background-color: #2E8A99;
+  border: 1px solid rgba(27, 31, 35, .0);
+  border-radius: 10px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  color: #fff;
+  height: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px 15px;
+  text-align: center;
+  text-decoration: none;
+}
+.uppercontainer > p{
+    font-size: 18px;
+}
+
+.usercardcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+/* ============ */
+
+.usercard{
+    display: flex;
+    justify-content: center;
+    background-color: #2E8A99;
+    color:#e3e0e0 ;
+    gap: 40%;
+    margin: 5px 0;
+    width: 70%;
+    /* height: 100px; */
+    padding: 5px 0;
+    border-radius: 10px;
+}
+.usercardleft{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.userdetailes{
+    /* background-color: aquamarine; */
+    height: 100px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+}
+.username{
+    font-size: 25px;
+    /* background-color: red; */
+    margin: 0;
+    padding: 8px 0;
+}
+.userdetailes > p{
+    font-size: 14px;
+    /* background-color: red; */
+    margin: 0;
+    padding: 5px 0;
+}
+
+.usercardbtn{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.usercardbtn > p{
+    padding: 2px 5px;
+}
+.usercardbtn > p:hover{
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.655);
+}
