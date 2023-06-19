@@ -45,19 +45,17 @@ const UserList = () => {
           {allUsers && allUsers.length === 0 ? "No record available" : null}
         </p>
         {allUsers &&
-          allUsers
-            .reverse()
-            .map((user, index) => (
-              <Usercard
-                key={index}
-                userdetail={user}
-                srn={index}
-                setDeleteModel={setDeleteModel}
-                setDeleteItemId={setDeleteItemId}
-                setEditModel={setEditModel}
-                setEditItemId={setEditItemId}
-              />
-            ))}
+          allUsers.map((user, index) => (
+            <Usercard
+              key={index}
+              userdetail={user}
+              srn={index}
+              setDeleteModel={setDeleteModel}
+              setDeleteItemId={setDeleteItemId}
+              setEditModel={setEditModel}
+              setEditItemId={setEditItemId}
+            />
+          ))}
       </div>
 
       {adduserModel && <AddUserModel setAddUserModel={setAddUserModel} />}
