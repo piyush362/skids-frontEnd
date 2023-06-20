@@ -18,7 +18,7 @@ const EditUserModel = ({ setEditModel, editItemId, setEditItemId }) => {
     const { name, value } = event.target;
     setuser((prevUser) => ({
       ...prevUser,
-      [name]: value,
+      [name]: value.toLowerCase(),
     }));
   };
 
@@ -61,6 +61,15 @@ const EditUserModel = ({ setEditModel, editItemId, setEditItemId }) => {
         return;
       }
     }
+
+    // Phone number regex pattern
+    const phonePattern = /^\d{10}$/;
+
+    if (user.userphone && !phonePattern.test(user.userphone)) {
+      alert("Invalid phone number format. Please enter a 10-digit number.");
+      return;
+    }
+
     try {
       setIsUplaoding(true);
       const response = await axios.put(

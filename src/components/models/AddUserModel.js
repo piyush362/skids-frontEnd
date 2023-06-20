@@ -14,7 +14,7 @@ const AddUserModel = ({ setAddUserModel }) => {
   const handleInputChange = (event) => {
     setnewuser({
       ...newuser,
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value.toLowerCase(),
     });
   };
 
@@ -32,21 +32,31 @@ const AddUserModel = ({ setAddUserModel }) => {
       }
     }
 
+    // Phone number regex pattern
+    const phonePattern = /^\d{10}$/;
+
+    if (newuser.userphone && !phonePattern.test(newuser.userphone)) {
+      alert("Invalid phone number format. Please enter a 10-digit number.");
+      return;
+    }
+
     try {
       setIsUplaoding(true);
       const response = await axios.post(
         "https://skids.onrender.com/api/user",
         newuser
       );
-      console.log(response.data);
+      alert(response.data);
       setAddUserModel(false);
       setIsUplaoding(false);
-      //   alert("user added...");
+      // alert("user added...");
       window.location.reload();
     } catch (error) {
-      alert("Error while adding new user..");
+      alert("Error while adding new user..fill all fields");
+      setIsUplaoding(false);
     }
   };
+
 
   return (
     <div className="upperModelDiv">
@@ -63,7 +73,7 @@ const AddUserModel = ({ setAddUserModel }) => {
         </div>
         <div>
           <div>
-            <label htmlFor="username">UserName</label>
+            <label htmlFor="username">UserName *</label>
             <input
               type="text"
               name="username"
@@ -72,7 +82,7 @@ const AddUserModel = ({ setAddUserModel }) => {
             />
           </div>
           <div>
-            <label htmlFor="useremail">UserEmail</label>
+            <label htmlFor="useremail">UserEmail *</label>
             <input
               type="text"
               name="useremail"
@@ -81,7 +91,7 @@ const AddUserModel = ({ setAddUserModel }) => {
             />
           </div>
           <div>
-            <label htmlFor="userphone">UserNumber</label>
+            <label htmlFor="userphone">UserNumber *</label>
             <input
               type="text"
               name="userphone"
