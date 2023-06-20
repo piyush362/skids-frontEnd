@@ -46,10 +46,19 @@ const AddUserModel = ({ setAddUserModel }) => {
         "https://skids.onrender.com/api/user",
         newuser
       );
-      alert(response.data);
+      if (response.data === "User already exists.") {
+        alert(response.data);
+        setIsUplaoding(false);
+        setnewuser({
+          username: "",
+          useremail: "",
+          userphone: "",
+        })
+        return;
+      }
       setAddUserModel(false);
       setIsUplaoding(false);
-      // alert("user added...");
+      alert("user added...");
       window.location.reload();
     } catch (error) {
       alert("Error while adding new user..fill all fields");
